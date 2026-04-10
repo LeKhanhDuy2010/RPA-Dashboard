@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  
+  --primary: #39FF14;
+  --primary-foreground: #000000;
+  
+  --secondary: #00FFFF;
+  --secondary-foreground: #000000;
+  
+  --accent: #FFAC1C;
+  --accent-foreground: #000000;
+  
+  --destructive: #FF007F;
+  --destructive-foreground: #ffffff;
+  
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  
+  --border: #000000;
+  --input: #000000;
+  --ring: #39FF14;
+  
+  --radius: 0px;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  
+  --primary: #39FF14;
+  --primary-foreground: #000000;
+  
+  --secondary: #00FFFF;
+  --secondary-foreground: #000000;
+  
+  --accent: #FFAC1C;
+  --accent-foreground: #000000;
+  
+  --destructive: #FF007F;
+  --destructive-foreground: #ffffff;
+  
+  --muted: #1a1a1a;
+  --muted-foreground: #a1a1aa;
+  
+  --card: #121212;
+  --card-foreground: #ffffff;
+  
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #39FF14;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.brutalist-card {
+  border: 2px solid currentColor;
+  box-shadow: 4px 4px 0px currentColor;
+  transition: all 0.2s ease;
+}
+
+.brutalist-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px currentColor;
+}
+
+.neon-glow-primary {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+.neon-glow-secondary {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}

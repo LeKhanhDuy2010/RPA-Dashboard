@@ -1,0 +1,5 @@
+{
+  "name": "RPA Insight Dashboard",
+  "description": "A vibrant, high-performance dashboard for monitoring RPA queues, success rates, and bot performance.",
+  "requestFramePermissions": []
+}
