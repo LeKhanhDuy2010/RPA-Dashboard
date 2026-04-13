@@ -6,6 +6,7 @@ export interface RPASummary {
   pendingTasks: number;
   completedToday: number;
   failedToday: number;
+  waitingToday: number;
 }
 
 export interface HourlyStat {
@@ -17,7 +18,8 @@ export interface HourlyStat {
 export interface QueueInfo {
   id: string;
   name: string;
+  robot: string;
   status: "Active" | "Idle" | "Error";
   priority: "High" | "Medium" | "Low";
-  load: number;
+  createdTime: TimeRanges;
 }
