@@ -22,9 +22,12 @@ export default defineConfig(({ mode }) => {
       },
     },
     server:  {
-    proxy: {
-      "/api": "http://10.20.95.27/FEAService/"
-    }
+      host: true,        // 👈 bắt buộc
+      port: 5173,
+      strictPort: true,  // (optional) tránh nhảy port
+      proxy: {
+        "/api": "http://10.20.95.27/FEAService/"
+      }
   }
   };
 });
